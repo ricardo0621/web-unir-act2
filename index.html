@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 2 · AWS · Ricardo Castillo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p class="etiqueta">UNIR · Administración y Gestión de Servidores Web</p>
+    <h1>Servicios base en la nube pública de AWS</h1>
+    <p class="sub">Sitio web estático alojado en <strong>Amazon S3</strong></p>
+    <p class="autor">Ricardo Andrés Castillo Rojas</p>
+  </header>
+
+  <main>
+    <section class="tarjetas">
+      <article>
+        <span class="num">01</span>
+        <h2>Cómputo · EC2 + Docker</h2>
+        <p>Instancia <b>t3.micro</b> con Amazon Linux 2023, Docker Engine y el contenedor <code>santospardos/unir:tetris01</code> publicado en el puerto 80.</p>
+      </article>
+      <article>
+        <span class="num">02</span>
+        <h2>Base de datos · Amazon RDS</h2>
+        <p>MySQL 8.4 administrado por AWS en una instancia <b>db.t4g.micro</b>, con acceso desde HeidiSQL restringido por grupo de seguridad.</p>
+      </article>
+      <article>
+        <span class="num">03</span>
+        <h2>Almacenamiento · Amazon S3</h2>
+        <p>Bucket con <b>alojamiento de sitio web estático</b> y política de lectura pública. Esta página se sirve directamente desde S3, sin servidor web.</p>
+      </article>
+    </section>
+
+    <section class="info">
+      <h2>Datos del despliegue</h2>
+      <ul>
+        <li><span>Región</span> us-east-2 (Ohio)</li>
+        <li><span>Bucket</span> ricardo-castillo-unir-act2</li>
+        <li><span>Origen</span> https://github.com/ricardo0621/web-unir-act2</li>
+        <li><span>Hora de carga en tu navegador</span> <b id="hora">—</b></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>Actividad 2 (laboratorio) · Universidad Internacional de La Rioja · 2026</footer>
+
+  <script>
+    document.getElementById('hora').textContent = new Date().toLocaleString('es-CO');
+  </script>
+</body>
+</html>
